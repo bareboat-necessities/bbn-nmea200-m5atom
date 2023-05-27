@@ -104,7 +104,7 @@ void setup() {
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
   NodeAddress = preferences.getInt("LastNodeAddress", 35);  // Read stored last NodeAddress, default 35
   preferences.end();
-  Serial.printf("NodeAddress=%d\n", NodeAddress);
+  //Serial.printf("NodeAddress=%d\n", NodeAddress);
 
   NMEA2000.SetMode(tNMEA2000::N2km_ListenAndNode, NodeAddress);
   NMEA2000.ExtendTransmitMessages(TransmitMessages);
@@ -141,7 +141,7 @@ void SendN2kTempPressure(void) {
       Temperature = 0, Humidity = 0;
     }
 
-    Serial.printf("Temperature: %3.1f °C - Barometric Pressure: %6.0f Pa\n", Temperature, BarometricPressure);
+    //Serial.printf("Temperature: %3.1f °C - Barometric Pressure: %6.0f Pa\n", Temperature, BarometricPressure);
 
     SetN2kPGN130310(N2kMsg, 0, N2kDoubleNA, CToKelvin(Temperature), BarometricPressure);
     NMEA2000.SendMsg(N2kMsg);
@@ -159,7 +159,7 @@ void loop() {
     preferences.begin("nvs", false);
     preferences.putInt("LastNodeAddress", SourceAddress);
     preferences.end();
-    Serial.printf("Address Change: New Address=%d\n", SourceAddress);
+    //Serial.printf("Address Change: New Address=%d\n", SourceAddress);
   }
 
   // Dummy to empty input buffer to avoid board to stuck with e.g. NMEA Reader
