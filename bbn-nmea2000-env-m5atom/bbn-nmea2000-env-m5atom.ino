@@ -83,9 +83,9 @@ void setup() {
   // Set product information
   NMEA2000.SetProductInformation("1",                      // Manufacturer's Model serial code
                                  100,                      // Manufacturer's product code
-                                 "My Sensor Module",       // Manufacturer's Model ID
-                                 "1.0.2.25 (2019-07-07)",  // Manufacturer's Software version code
-                                 "1.0.2.0 (2019-07-07)"    // Manufacturer's Model version
+                                 "BBN Env Sensor Module",  // Manufacturer's Model ID
+                                 "1.0.2.25 (2023-05-27)",  // Manufacturer's Software version code
+                                 "1.0.2.0 (2023-05-27)"    // Manufacturer's Model version
   );
   // Set device information
   NMEA2000.SetDeviceInformation(id,   // Unique number. Use e.g. Serial number.
@@ -99,7 +99,7 @@ void setup() {
   NMEA2000.SetForwardType(tNMEA2000::fwdt_Text);  // Show in clear text. Leave uncommented for default Actisense format.
 
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
-  NodeAddress = preferences.getInt("LastNodeAddress", 34);  // Read stored last NodeAddress, default 34
+  NodeAddress = preferences.getInt("LastNodeAddress", 35);  // Read stored last NodeAddress, default 35
   preferences.end();
   Serial.printf("NodeAddress=%d\n", NodeAddress);
 
