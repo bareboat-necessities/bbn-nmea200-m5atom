@@ -4,6 +4,11 @@
 // Based on: https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/tree/main/ActisenseListenerSender-ESP32
 // GPL 3.0 Licensed
 
+// Acts as Actisense USB nmea 2000 gateway. Powered by USB. NMEA 2000 is isolated (so connect only H and L)
+// To register in SignalK find out /dev/tty* USB device
+// and add NMEA 2000 connection with Source Type (Actisense AGT-1 Canboat-js)
+// baud rate: 115200
+
 #include <Arduino.h>
 
 //#define N2k_CAN_INT_PIN 2
