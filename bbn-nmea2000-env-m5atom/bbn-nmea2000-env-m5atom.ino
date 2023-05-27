@@ -17,6 +17,9 @@
 //
 // Edited by mgrouch for m5atom with sht30 and qmp6988 sensors
 
+// For Can CAIS3050G module. Powered by USB
+// Can isolated (so connect only H and L)
+
 #include <Arduino.h>
 #include <M5Atom.h>
 #include "M5_ENV.h"
