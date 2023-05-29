@@ -20,17 +20,17 @@
 // For Can CAIS3050G module. Powered by USB
 // Can isolated (so connect only H and L)
 
-#include <Arduino.h>
 #include <M5Atom.h>
-#include "M5_ENV.h"
+#include <Arduino.h>
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_22  // Set CAN TX port to 22 for M5ATOM CANBUS
 #define ESP32_CAN_RX_PIN GPIO_NUM_19  // Set CAN RX port to 19 for M5ATOM CANBUS
 
+#include "M5_ENV.h"
+
 #include <Preferences.h>
 #include <NMEA2000_CAN.h>  // This will automatically choose right CAN library and create suitable NMEA2000 object
 #include <N2kMessages.h>
-
 #include <Wire.h>
 
 SHT3X sht30;
@@ -53,7 +53,18 @@ const unsigned long TransmitMessages[] PROGMEM = { 130310L,  // Outside Environm
 // Send time offsets
 #define TempSendOffset 0
 
-#define SlowDataUpdatePeriod 1000  // Time between CAN Messages sent
+#define SlowDataUpdatePeriod 250  // Time between CAN Messages sent
+
+static bool led_state = false;
+
+void ToggleLed() {
+  if (led_state) {
+    M5.dis.drawpix(0, 0x00ff00);
+  } else {
+    M5.dis.drawpix(0, 0x000000);
+  }
+  led_state = !led_state;
+}
 
 void debug_log(char* str) {
 #if ENABLE_DEBUG_LOG == 1
@@ -62,8 +73,8 @@ void debug_log(char* str) {
 }
 
 void setup() {
-  M5.begin();          // Init M5Atom.
-  Wire.begin(26, 32);  // Initialize pin 26,32.
+  M5.begin(true, false, true);  // Init M5Atom.
+  Wire.begin(26, 32);           // Initialize pin 26,32.
   qmp6988.init();
 
   uint8_t chipid[6];
@@ -141,6 +152,7 @@ void SendN2kTempPressure(void) {
       Temperature = 0, Humidity = 0;
     }
 
+    ToggleLed();
     //Serial.printf("Temperature: %3.1f °C - Barometric Pressure: %6.0f Pa\n", Temperature, BarometricPressure);
 
     SetN2kPGN130310(N2kMsg, 0, N2kDoubleNA, CToKelvin(Temperature), BarometricPressure);
