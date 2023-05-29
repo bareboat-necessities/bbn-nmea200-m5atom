@@ -118,14 +118,14 @@ void setup() {
 
   // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
 
-  nmea2000->SetForwardType(tNMEA2000::fwdt_Text);  // Show in clear text. Leave uncommented for default Actisense format.
+  //nmea2000->SetForwardType(tNMEA2000::fwdt_Text);  // Show in clear text. Leave uncommented for default Actisense format.
 
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
   NodeAddress = preferences.getInt("LastNodeAddress", 35);  // Read stored last NodeAddress, default 35
   preferences.end();
   //Serial.printf("NodeAddress=%d\n", NodeAddress);
 
-  nmea2000->SetMode(tNMEA2000::N2km_ListenAndNode, NodeAddress);
+  nmea2000->SetMode(tNMEA2000::N2km_NodeOnly, NodeAddress);
   nmea2000->ExtendTransmitMessages(TransmitMessages);
 
   nmea2000->Open();
@@ -161,7 +161,7 @@ void SendN2kTempPressure(void) {
     }
 
     ToggleLed();
-    //Serial.printf("Temperature: %3.1f °C - Barometric Pressure: %6.0f Pa\n", Temperature, BarometricPressure);
+    Serial.printf("Temperature: %3.1f °C - Barometric Pressure: %6.0f Pa\n", Temperature, BarometricPressure);
 
     SetN2kPGN130310(N2kMsg, 0, N2kDoubleNA, CToKelvin(Temperature), BarometricPressure);
     nmea2000->SendMsg(N2kMsg);
