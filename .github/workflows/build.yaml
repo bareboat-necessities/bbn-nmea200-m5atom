@@ -18,6 +18,20 @@ jobs:
           ref: master
           path: CustomLibrary_M5Atom # must contain string "Custom"
 
+    - name: Checkout NMEA2000 library
+      uses: actions/checkout@v3
+      with:
+          repository: ttlappalainen/NMEA2000
+          ref: master
+          path: CustomLibrary_NMEA2000 # must contain string "Custom"
+
+    - name: Checkout NMEA2000_esp32 library
+      uses: actions/checkout@v3
+      with:
+          repository: ttlappalainen/NMEA2000_esp32
+          ref: master
+          path: CustomLibrary_NMEA2000_esp32 # must contain string "Custom"
+
     - name: Compile sketch
       uses: ArminJo/arduino-test-compile@v3
       with:
