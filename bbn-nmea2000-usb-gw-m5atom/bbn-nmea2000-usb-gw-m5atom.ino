@@ -8,6 +8,8 @@
 // To register in SignalK find out /dev/tty* USB device
 // and add NMEA 2000 connection with Source Type (Actisense AGT-1 Canboat-js)
 // baud rate: 115200
+//
+// Plugin into USB 2.0 directly on pi. I've seen issues with USB 3.0 when can data stream would stop.
 
 #include <Arduino.h>
 
