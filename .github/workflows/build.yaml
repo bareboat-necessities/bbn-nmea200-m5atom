@@ -11,13 +11,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Checkout M5Atom library
-      uses: actions/checkout@v3
-      with:
-          repository: m5stack/M5Atom
-          ref: master
-          path: CustomLibrary_M5Atom # must contain string "Custom"
-
     - name: Checkout NMEA2000 library
       uses: actions/checkout@v3
       with:
@@ -37,7 +30,7 @@ jobs:
       with:
         arduino-board-fqbn: esp32:esp32:m5stack-atom
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-        required-libraries: ReactESP@2.1.0
+        required-libraries: ReactESP@2.1.0,M5Atom@0.1.0
         sketch-names: "*.ino"
         sketch-names-find-start: bbn-*/*
         extra-arduino-cli-args: "--warnings default"
