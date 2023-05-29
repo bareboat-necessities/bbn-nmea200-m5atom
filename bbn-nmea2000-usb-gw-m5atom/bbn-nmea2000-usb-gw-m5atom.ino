@@ -16,8 +16,7 @@
 #define CAN_RX_PIN ESP32_CAN_RX_PIN
 
 #include <ActisenseReader.h>
-#include <N2kMessages.h>
-#include <NMEA2000_esp32.h>
+#include "NMEA2000_esp32.h"
 #include <ReactESP.h>
 #include <Wire.h>
 #include <esp_int_wdt.h>
