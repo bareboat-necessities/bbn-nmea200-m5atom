@@ -1,5 +1,11 @@
 # N2K for M5Atom
-N2K esp32 Arduino sketches for m5atom with can CAIS3050G based on https://github.com/AK-Homberger work
+N2K esp32 Arduino sketches for m5atom with can CAIS3050G based on:
+
+- https://github.com/ttlappalainen/ 
+- https://github.com/hatlabs/ 
+- https://github.com/AK-Homberger 
+
+works
 
 ## Wiring
 Do not wire H and L N2K in opposite. Coloring on A5Atom CAN CAIS3050G is misleading.
