@@ -2,7 +2,7 @@
 // To register in SignalK find out /dev/tty* USB device
 // and add NMEA 2000 connection with Source Type (Actisense AGT-1 Canboat-js)
 // baud rate: 115200
-// Connect to USB 2.0 port on pi (I had drops of nmea 2000 datt stream when connected to USB 3.0 on external hub)
+// Connect to USB 2.0 port on pi (I had drops of nmea 2000 data stream when connected to USB 3.0 on external hub)
 
 // Based on: https://github.com/hatlabs/SH-ESP32-nmea2000-gateway/
 
