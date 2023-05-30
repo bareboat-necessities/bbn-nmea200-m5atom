@@ -1,4 +1,4 @@
-# DIY NMEA 2000 to USB gateway in actisense format on m2atom
+# DIY NMEA 2000 to USB gateway in Actisense format on M5Atom
 
 Effectively equivalent of NGT-1.
 
