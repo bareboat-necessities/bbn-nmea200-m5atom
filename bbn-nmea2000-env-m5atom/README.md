@@ -7,6 +7,7 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 - M5Atom Lite
 - Can CAIS3050G module for M5Atom (for NMEA 2000)
 - Env III Sensor with SHT30 and QMP6988 module for M5Atom
+- Optional: M5Stack I2C hub (if you plan to connect more i2c sensors, like illuminance, IMU, etc)
 
 ## Patches
 
