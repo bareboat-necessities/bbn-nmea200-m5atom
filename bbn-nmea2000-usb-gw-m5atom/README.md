@@ -4,6 +4,11 @@ Effectively equivalent of NGT-1.
 
 Powered by USB. CanBus isolated. (Connect H and L only)
 
+## Required Hardware:
+
+- M5Atom Lite
+- CAN CAIS3050G module for M5Atom (for NMEA 2000)
+
 ## Setup in SignalK
 
 To register gateway in SignalK
