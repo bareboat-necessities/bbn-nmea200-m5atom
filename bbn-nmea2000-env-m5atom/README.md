@@ -1,11 +1,11 @@
-# Enviromental NMEA 2000 sensors (pressure and temperature outside) with M5Atom
+# Enviromental N2K sensors (pressure and temperature outside) with M5Atom
 
 Powered by USB. CanBus isolated. (Connect H and L only)
 
 ## Required Hardware:
 
 - M5Atom Lite
-- CAN CAIS3050G module for M5Atom (for NMEA 2000)
+- CAN CAIS3050G module for M5Atom (for N2K)
 - Env III Sensor with SHT30 and QMP6988 module for M5Atom
 - Optional: M5Stack I2C hub (if you plan to connect more i2c sensors, like illuminance, IMU, etc)
 
