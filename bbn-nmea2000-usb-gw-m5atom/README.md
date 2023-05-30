@@ -8,7 +8,7 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 
 To register gateway in SignalK
 
-- find out /dev/tty* USB device
+- find out /dev/tty* USB device of gateway (in your raspberry pi with BBN OS or other Linux)
 - and add NMEA 2000 connection with Source Type (Actisense AGT-1 Canboat-js) baud rate: 115200
 - Connect to USB 2.0 port on pi (I had drops of nmea 2000 datt stream when connected to USB 3.0 on external hub)
 
