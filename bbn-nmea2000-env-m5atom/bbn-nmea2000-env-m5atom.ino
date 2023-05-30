@@ -165,6 +165,8 @@ void SendN2kTempPressure(void) {
 
     SetN2kPGN130310(N2kMsg, 0, N2kDoubleNA, CToKelvin(Temperature), BarometricPressure);
     nmea2000->SendMsg(N2kMsg);
+    SetN2kPGN130313(N2kMsg, 0, 0, tN2kHumiditySource::N2khs_OutsideHumidity, Humidity);
+    nmea2000->SendMsg(N2kMsg);
   }
 }
 
