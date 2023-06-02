@@ -34,7 +34,7 @@ const unsigned long TransmitMessages[] PROGMEM = { 127257L,  // Attitude paramet
 // Send time offsets
 #define sendOffset 0
 
-#define dataUpdatePeriod 100  // Time between CAN Messages sent
+#define dataUpdatePeriod 250  // Time between CAN Messages sent
 
 static bool led_state = false;
 
