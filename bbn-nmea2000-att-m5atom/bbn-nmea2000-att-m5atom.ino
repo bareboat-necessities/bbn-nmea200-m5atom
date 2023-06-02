@@ -103,7 +103,7 @@ void SendN2kAttitide(void) {
     M5.IMU.getAhrsData(&pitch, &roll, &yaw);
     Serial.printf("%.2f, %.2f\n", (pitch - attOffset[0]), (roll - attOffset[1]));
 
-    SetN2kAttitude(N2kMsg, 0, (pitch - attOffset[0]) * PI / 180.0, (roll - attOffset[1]) * PI / 180.0, N2kDoubleNA);
+    SetN2kAttitude(N2kMsg, 0, N2kDoubleNA, (pitch - attOffset[0]) * PI / 180.0, (roll - attOffset[1]) * PI / 180.0);
     nmea2000->SendMsg(N2kMsg);
   }
 }
