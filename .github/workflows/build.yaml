@@ -9,17 +9,17 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Checkout NMEA2000 library
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
           repository: ttlappalainen/NMEA2000
           ref: master
           path: CustomLibrary_NMEA2000 # must contain string "Custom"
 
     - name: Checkout M5Atom library
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
           repository: m5stack/M5Atom
           ref: 825ddb24dcaf9e7bc1b533ed25af424dcc9fafed
