@@ -25,7 +25,7 @@
 #include "NMEA2000_esp32.h"
 #include <ReactESP.h>
 #include <Wire.h>
-#include <esp_private/esp_int_wdt.h>
+#include <esp_int_wdt.h>
 #include <esp_task_wdt.h>
 
 using namespace reactesp;
