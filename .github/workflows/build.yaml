@@ -24,7 +24,7 @@ jobs:
         arduino-board-fqbn: esp32:esp32:m5stack-atom
         arduino-platform: esp32:esp32@2.0.15
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-        required-libraries: ReactESP@2.1.0,M5Atom@0.1.0
+        required-libraries: ReactESP@2.1.0,M5Atom@0.1.0,M5UNIT-ENV@1.0.0
         sketch-names: "*.ino"
         sketch-names-find-start: bbn-*/*
         extra-arduino-cli-args: "--warnings default"
