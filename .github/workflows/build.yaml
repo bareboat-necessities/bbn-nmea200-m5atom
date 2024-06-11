@@ -30,7 +30,7 @@ jobs:
       with:
         arduino-board-fqbn: esp32:esp32:m5stack_atom
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-        required-libraries: ReactESP@2.1.0
+        required-libraries: ReactESP@2.1.0,FastLED@3.7.0
         sketch-names: "*.ino"
         sketch-names-find-start: bbn-*/*
         extra-arduino-cli-args: "--warnings default"
