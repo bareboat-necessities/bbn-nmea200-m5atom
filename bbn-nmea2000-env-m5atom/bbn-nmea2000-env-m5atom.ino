@@ -29,7 +29,7 @@
 #define CAN_TX_PIN ESP32_CAN_TX_PIN
 #define CAN_RX_PIN ESP32_CAN_RX_PIN
 
-#include "M5_ENV.h"
+#include <M5_ENV.h>
 
 #include <Preferences.h>
 #include "NMEA2000_esp32.h"
