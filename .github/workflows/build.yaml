@@ -9,21 +9,14 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Checkout NMEA2000 library
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
           repository: ttlappalainen/NMEA2000
           ref: master
           path: CustomLibrary_NMEA2000 # must contain string "Custom"
-
-    - name: Checkout M5Atom library
-      uses: actions/checkout@v4
-      with:
-          repository: m5stack/M5Atom
-          ref: 825ddb24dcaf9e7bc1b533ed25af424dcc9fafed
-          path: CustomLibrary_M5Atom # must contain string "Custom"
 
     - name: Compile sketch
       uses: ArminJo/arduino-test-compile@v3
@@ -31,9 +24,8 @@ jobs:
         arduino-board-fqbn: esp32:esp32:m5stack-atom
         arduino-platform: esp32:esp32@2.0.15
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-        required-libraries: ReactESP@2.1.0,FastLED@3.7.0,M5Family@0.1.3,M5-Ethernet@4.0.0,ATOM_DTU_CAT1@0.0.1
+        required-libraries: ReactESP@2.1.0,M5Atom@0.1.0
         sketch-names: "*.ino"
         sketch-names-find-start: bbn-*/*
         extra-arduino-cli-args: "--warnings default"
         set-build-path: true
-
