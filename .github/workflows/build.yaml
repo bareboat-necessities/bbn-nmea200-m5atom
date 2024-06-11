@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v3
       with:
           repository: m5stack/M5Atom
-          ref: 825ddb2
+          ref: 825ddb24dcaf9e7bc1b533ed25af424dcc9fafed
           path: CustomLibrary_M5Atom # must contain string "Custom"
 
     - name: Compile sketch
