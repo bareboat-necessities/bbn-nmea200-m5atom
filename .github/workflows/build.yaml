@@ -29,3 +29,9 @@ jobs:
         sketch-names-find-start: bbn-*/*
         extra-arduino-cli-args: "--warnings default"
         set-build-path: true
+
+    - name: Make zip
+      run: |
+        ls /home/runner/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/*/build/*.bin | zip bbn-nmea200-m5atom_bin-$(date +%Y-%m-%d).zip -j -@
+        pwd
+        ls *.zip
