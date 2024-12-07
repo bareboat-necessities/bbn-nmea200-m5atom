@@ -17,6 +17,13 @@ To register gateway in SignalK
 - find out /dev/tty* USB device of gateway (in your raspberry pi with BBN OS or other Linux)
 - and add N2K connection with Source Type (Actisense AGT-1 Canboat-js) baud rate: 115200
 
+## Flashing firmware on Bareboat Necessities OS
+
+````
+wget https://raw.githubusercontent.com/bareboat-necessities/my-bareboat/refs/heads/master/m5stack-tools/bbn-flash-m5-n2k-usb.sh
+chmod +x bbn-flash-m5-n2k-usb.sh
+./bbn-flash-m5-n2k-usb.sh -p /dev/ttyUSB0
+````
 
 ## Patches
 
