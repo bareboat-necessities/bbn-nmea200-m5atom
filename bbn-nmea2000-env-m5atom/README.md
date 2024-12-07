@@ -9,6 +9,14 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 - Env III Sensor with SHT30 and QMP6988 module for M5Atom
 - Optional: M5Stack I2C hub (if you plan to connect more i2c sensors, like illuminance, IMU, etc)
 
+## Flashing firmware on Bareboat Necessities OS
+
+````
+wget https://raw.githubusercontent.com/bareboat-necessities/my-bareboat/refs/heads/master/m5stack-tools/bbn-flash-m5-n2k-env3.sh
+chmod +x bbn-flash-m5-n2k-env3.sh
+./bbn-flash-m5-n2k-env3.sh -p /dev/ttyUSB0
+````
+
 ## Patches
 
 NMEA2000_esp32 forked from https://github.com/ttlappalainen/NMEA2000_esp32
