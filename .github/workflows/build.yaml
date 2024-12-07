@@ -35,21 +35,21 @@ jobs:
         pwd;
         python3 "$HOME/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py" 
         --chip esp32 merge_bin -o /home/runner/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom-firmware.bin 
-        --flash_mode dio --flash_freq 80m --flash_size 16MB 
+        --flash_mode dio --flash_freq 40m --flash_size 4MB 
         0x1000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.bootloader.bin" 
         0x8000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.partitions.bin" 
         0xe000 "$HOME/.arduino15/packages/esp32/hardware/esp32/2.0.15/tools/partitions/boot_app0.bin" 
         0x10000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.bin"; 
         python3 "$HOME/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py" 
         --chip esp32 merge_bin -o /home/runner/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-env-m5atom/build/bbn-nmea2000-env-m5atom-firmware.bin 
-        --flash_mode dio --flash_freq 80m --flash_size 16MB 
+        --flash_mode dio --flash_freq 40m --flash_size 4MB 
         0x1000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-env-m5atom/build/bbn-nmea2000-env-m5atom.ino.bootloader.bin" 
         0x8000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-env-m5atom/build/bbn-nmea2000-env-m5atom.ino.partitions.bin" 
         0xe000 "$HOME/.arduino15/packages/esp32/hardware/esp32/2.0.15/tools/partitions/boot_app0.bin" 
         0x10000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-env-m5atom/build/bbn-nmea2000-env-m5atom.ino.bin"; 
         python3 "$HOME/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py" 
         --chip esp32 merge_bin -o /home/runner/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-att-m5atom/build/bbn-nmea2000-att-m5atom-firmware.bin 
-        --flash_mode dio --flash_freq 80m --flash_size 16MB 
+        --flash_mode dio --flash_freq 40m --flash_size 4MB 
         0x1000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-att-m5atom/build/bbn-nmea2000-att-m5atom.ino.bootloader.bin" 
         0x8000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-att-m5atom/build/bbn-nmea2000-att-m5atom.ino.partitions.bin" 
         0xe000 "$HOME/.arduino15/packages/esp32/hardware/esp32/2.0.15/tools/partitions/boot_app0.bin" 
