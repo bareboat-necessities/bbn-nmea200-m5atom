@@ -39,7 +39,7 @@ jobs:
         0x1000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.bootloader.bin" 
         0x8000 "$HOME/work/bbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.partitions.bin" 
         0xe000 "$HOME/.arduino15/packages/esp32/hardware/esp32/2.0.15/tools/partitions/boot_app0.bin" 
-        0x10000 "$HOME/workbbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.ino.bin" 
+        0x10000 "$HOME/workbbn-nmea200-m5atom/bbn-nmea200-m5atom/bbn-nmea2000-usb-gw-m5atom/build/bbn-nmea2000-usb-gw-m5atom.ino.bin" 
         
     - name: Make zip
       run: |
