@@ -2,6 +2,9 @@
 
 Powered by USB. CanBus isolated. (Connect H and L only)
 
+This one is just for illutration purposes because you need compass (magnetometer)
+to know what is pitch and what is heel.
+
 ## Required Hardware:
 
 - M5Atom Lite
