@@ -25,6 +25,10 @@ chmod +x bbn-flash-m5-n2k-usb.sh
 ./bbn-flash-m5-n2k-usb.sh -p /dev/ttyUSB0
 ````
 
+## Troubleshooting
+
+- Normal working behavior is fast flashing blue status light indicating traffic passed.
+
 ## Patches
 
 NMEA2000_esp32 forked from https://github.com/ttlappalainen/NMEA2000_esp32
