@@ -9,6 +9,14 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 - M5Atom Lite
 - CAN CAIS3050G module for M5Atom (for N2K)
 
+## Suggested enclosure and connectors
+
+https://www.amazon.com/HoHaing-Waterproof-Electrical-Electronics-Enclosure/dp/B0BY8XXZ2T
+
+Panel mount USB-C connector
+
+Panel mount NMEA-2000 connector with pig tails
+
 ## Setup in SignalK
 
 To register gateway in SignalK
