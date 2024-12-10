@@ -17,6 +17,13 @@ chmod +x bbn-flash-m5-n2k-env3.sh
 ./bbn-flash-m5-n2k-env3.sh -p /dev/ttyUSB0
 ````
 
+## Power from NMEA 2000
+
+You can step down power provided by
+NMEA 2000 bus and direct it to USB power. 
+
+The 12v can be reduced to 5 Volt with a DC Step-Down_Converter (D24V10F5, https://www.pololu.com/product/2831)
+
 ## Patches
 
 NMEA2000_esp32 forked from https://github.com/ttlappalainen/NMEA2000_esp32
