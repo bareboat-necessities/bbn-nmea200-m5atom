@@ -11,6 +11,8 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 
 ## Suggested enclosure and connectors
 
+Waterproof Plastic Enclosure Box Electronic Ip67 ABS Flanged Clear Size 100*68*50 (mm)
+
 https://www.aliexpress.us/item/3256806147195874.html
 
 Panel mount USB-C connector
