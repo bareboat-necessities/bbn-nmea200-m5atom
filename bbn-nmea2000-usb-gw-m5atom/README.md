@@ -6,8 +6,8 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 
 ## Required Hardware:
 
-- M5Atom Lite
-- CAN CAIS3050G module for M5Atom (for N2K)
+- M5Atom Lite:   https://shop.m5stack.com/products/atom-lite-esp32-development-kit
+- CAN CAIS3050G module for M5Atom (for N2K):   https://shop.m5stack.com/products/atomic-canbus-base-ca-is3050g
 
 ## Suggested enclosure and connectors
 
