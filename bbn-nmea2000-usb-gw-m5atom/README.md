@@ -19,7 +19,11 @@ Panel mount USB-C connector. USB-C 3.1 IP67 waterproof cable type c 90 degree ma
 
 https://www.aliexpress.us/item/3256801869230308.html
 
-Panel mount NMEA-2000 connector with pig tails
+Panel mount NMEA-2000 connector with pig tails. 
+M12 5 Pin Male Connector Cable, A Coded Straight Back Mount Cable Waterproof Male Aviation Socket UnShielded Electrical Cable IP67 Sensor Receptacle（0.5Meter）
+Brand: FOWIUNYE
+
+https://www.amazon.com/Connector-Waterproof-UnShielded-Electrical-Receptacle/dp/B0CB6SCTJ1
 
 ## Setup in SignalK
 
