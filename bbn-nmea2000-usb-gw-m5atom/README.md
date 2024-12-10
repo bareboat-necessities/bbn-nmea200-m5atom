@@ -15,7 +15,9 @@ Waterproof ABS Plastic Enclosure Box Electronic Ip67 Flanged, Clear Cover, Size 
 
 https://www.aliexpress.us/item/3256806147195874.html
 
-Panel mount USB-C connector
+Panel mount USB-C connector. USB-C 3.1 IP67 waterproof cable type c 90 degree male to female panel car ship dashboard installation connector
+
+https://www.aliexpress.us/item/3256801869230308.html
 
 Panel mount NMEA-2000 connector with pig tails
 
