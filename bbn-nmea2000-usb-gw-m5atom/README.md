@@ -12,6 +12,7 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 ## Suggested enclosure and connectors
 
 https://www.polycase.com/
+
 PartML-46F*1508
 
 Panel mount USB-C connector
