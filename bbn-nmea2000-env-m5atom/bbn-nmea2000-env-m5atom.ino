@@ -80,14 +80,14 @@ void debug_log(char* str) {
 
 void setup() {
   M5.begin(true, false, true);  // Init M5Atom.
-  if (!qmp.begin(&Wire, QMP6988_SLAVE_ADDRESS_L, 26, 32, 400000U)) {
+  if (!qmp6988.begin(&Wire, QMP6988_SLAVE_ADDRESS_L, 26, 32, 400000U)) {
     while (1) {
       Serial.println("Couldn't find QMP6988");
       delay(500);
     }
   }
 
-  if (!sht3x.begin(&Wire, SHT3X_I2C_ADDR, 26, 32, 400000U)) {
+  if (!sht30.begin(&Wire, SHT3X_I2C_ADDR, 26, 32, 400000U)) {
     while (1) {
       Serial.println("Couldn't find SHT3X");
       delay(500);
