@@ -50,3 +50,8 @@ chmod +x bbn-flash-m5-n2k-usb.sh
 NMEA2000_esp32 forked from https://github.com/ttlappalainen/NMEA2000_esp32
 with some error handling additions
 based on https://www.esp32.com/viewtopic.php?t=5010
+
+## Alt versions
+
+For atomS3-lite  use https://github.com/bareboat-necessities/bbn-m5-s3-n2k-usb
+
