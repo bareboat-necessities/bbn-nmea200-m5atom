@@ -30,6 +30,7 @@
 #define CAN_RX_PIN ESP32_CAN_RX_PIN
 
 #include <M5UnitENV.h>
+
 #include <Preferences.h>
 #include "NMEA2000_esp32.h"
 #include <N2kMessages.h>
@@ -53,7 +54,8 @@ Preferences preferences;  // Nonvolatile storage on ESP32 - To store LastDeviceA
 // Set the information for other bus devices, which messages we support
 
 const unsigned long TransmitMessages[] PROGMEM = { 130310L,  // Outside Environmental parameters
-                                                   0 };
+                                                   0
+                                                 };
 // Send time offsets
 #define TempSendOffset 0
 
@@ -78,8 +80,19 @@ void debug_log(char* str) {
 
 void setup() {
   M5.begin(true, false, true);  // Init M5Atom.
-  Wire.begin(26, 32);           // Initialize pin 26,32.
-  qmp6988.init();
+  if (!qmp.begin(&Wire, QMP6988_SLAVE_ADDRESS_L, 26, 32, 400000U)) {
+    while (1) {
+      Serial.println("Couldn't find QMP6988");
+      delay(500);
+    }
+  }
+
+  if (!sht3x.begin(&Wire, SHT3X_I2C_ADDR, 26, 32, 400000U)) {
+    while (1) {
+      Serial.println("Couldn't find SHT3X");
+      delay(500);
+    }
+  }
 
   uint8_t chipid[6];
   uint32_t id = 0;
@@ -107,13 +120,13 @@ void setup() {
                                   "BBN Env Sensor Module",  // Manufacturer's Model ID
                                   "1.0.2.25 (2023-05-27)",  // Manufacturer's Software version code
                                   "1.0.2.0 (2023-05-27)"    // Manufacturer's Model version
-  );
+                                 );
   // Set device information
   nmea2000->SetDeviceInformation(id,   // Unique number. Use e.g. Serial number.
                                  130,  // Device function=Temperature. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
                                  75,   // Device class=Sensor Communication Interface. See codes on  http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
                                  2046  // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
-  );
+                                );
 
   // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
 
@@ -151,8 +164,10 @@ void SendN2kTempPressure(void) {
   if (IsTimeToUpdate(SlowDataUpdated)) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    BarometricPressure = qmp6988.calcPressure();
-    if (sht30.get() == 0) {       // Obtain the data of shT30.
+    if (qmp6988.update()) {
+      BarometricPressure = qmp6988.calcPressure();
+    }
+    if (sht30.update()) {       // Obtain the data of shT30.
       Temperature = sht30.cTemp;  // Store the temperature obtained from shT30.
       Humidity = sht30.humidity;  // Store the humidity obtained from the SHT30.
     } else {
