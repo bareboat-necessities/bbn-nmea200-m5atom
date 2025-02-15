@@ -29,3 +29,7 @@ The 12v can be reduced to 5 Volt with a DC Step-Down_Converter (D24V10F5, https:
 NMEA2000_esp32 forked from https://github.com/ttlappalainen/NMEA2000_esp32
 with some error handling additions
 based on https://www.esp32.com/viewtopic.php?t=5010
+
+## Alternatives
+
+For m5stack atomS3-lite version look at: https://github.com/bareboat-necessities/bbn-m5-s3-n2k-i2c
