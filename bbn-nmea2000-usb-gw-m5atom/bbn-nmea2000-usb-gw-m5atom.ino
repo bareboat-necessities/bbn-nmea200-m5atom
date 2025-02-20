@@ -108,6 +108,13 @@ void setup() {
   nmea2000->SetN2kCANSendFrameBufSize(250);
   nmea2000->SetN2kCANReceiveFrameBufSize(250);
 
+  uint8_t chipid[6];
+  uint32_t id = 0;
+  int i = 0;
+
+  esp_efuse_mac_get_default(chipid);
+  for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
+  
   // Set Product information
   nmea2000->SetProductInformation(
     "20230529",                 // Manufacturer's Model serial code (max 32 chars)
@@ -118,7 +125,7 @@ void setup() {
   );
   // Set device information
   nmea2000->SetDeviceInformation(
-    230529,  // Unique number. Use e.g. Serial number.
+    id,      // Unique number. Use e.g. Serial number.
     130,     // Device function=Analog to NMEA 2000 Gateway. See codes on
              // http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
     25,      // Device class=Inter/Intranetwork Device. See codes on
