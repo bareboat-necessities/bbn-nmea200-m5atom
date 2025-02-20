@@ -12,6 +12,10 @@ Powered by USB. CanBus isolated. (Connect H and L only)
 ## Flashing firmware on Bareboat Necessities OS
 
 ````
+# shutdown signalk
+sudo systemctl stop signalk
+
+if [ -f bbn-flash-m5-n2k-env3.sh ]; then rm bbn-flash-m5-n2k-env3.sh; fi
 wget https://raw.githubusercontent.com/bareboat-necessities/my-bareboat/refs/heads/master/m5stack-tools/bbn-flash-m5-n2k-env3.sh
 chmod +x bbn-flash-m5-n2k-env3.sh
 ./bbn-flash-m5-n2k-env3.sh -p /dev/ttyUSB0
